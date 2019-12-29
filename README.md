@@ -1,9 +1,7 @@
 # Introducción a las Ciencias de la Computación.
-> Semestre 2020-1.
-
-> Profesor Canek Peláez.
-
-> Ciencias de la Computación. Facultad de Ciencias. Universidad Nacional Autónoma de México.
+> Semestre 2020-1.  
+Profesor Canek Peláez.  
+Ciencias de la Computación. Facultad de Ciencias. Universidad Nacional Autónoma de México.
 
 ## Descripción del curso.
 Durante el curso se vio de manera superficial distintos aspectos esenciales correspondientes al estudio de las Ciencias de la Computación. Entre ellos:
