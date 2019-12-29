@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import mx.unam.ciencias.icc.*?>
+<?import mx.unam.ciencias.icc.fx.*?>
+
+<AnchorPane styleClass="background"
+            prefWidth="430.0" prefHeight="240.0"
+            fx:controller="mx.unam.ciencias.icc.fx.ControladorFormaMuseo"
+            xmlns:fx="http://javafx.com/fxml">
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+  <children>
+    <GridPane prefWidth="430.0" prefHeight="180.0"
+              AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" >
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="150.0"
+                           prefWidth="150.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="300.0"
+                           prefWidth="250.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      </rowConstraints>
+      <children>
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Salas:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Costo General:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="Costo Estudiantes:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="Visitantes:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label text="Estacionamiento:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <EntradaVerificable fx:id="entradaNombre"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="0">
+          <tooltip>
+            <Tooltip text="El nombre no puede ser vacío"/>
+          </tooltip>
+        </EntradaVerificable>
+        <EntradaVerificable fx:id="entradaSalas"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <tooltip>
+            <Tooltip text="El número de salas debe ser mayor o igual a 0"/>
+          </tooltip>
+        </EntradaVerificable>
+        <EntradaVerificable fx:id="entradaCostoGeneral"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <tooltip>
+            <Tooltip text="El costo de entrada para el público en general debe ser mayor o igual a 0"/>
+          </tooltip>
+        </EntradaVerificable>
+        <EntradaVerificable fx:id="entradaCostoEstudiantes"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <tooltip>
+            <Tooltip text="El costo de entrada para estudiantes debe ser mayor o igual a 0"/>
+          </tooltip>
+        </EntradaVerificable>
+        <EntradaVerificable fx:id="entradaVisitantes"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <tooltip>
+            <Tooltip text="El número de visitantes por año debe ser mayor o igual a 0"/>
+          </tooltip>
+        </EntradaVerificable>
+        <CasillaVerificable fx:id="entradaEstacionamiento"
+                            GridPane.columnIndex="1" GridPane.rowIndex="5">
+          <tooltip>
+            <Tooltip text="Solo acepta las entradas true o false"/>
+          </tooltip>
+        </CasillaVerificable>
+      </children>
+    </GridPane>
+    <ButtonBar AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <buttons>
+        <Button fx:id="botonAceptar" disable="true" mnemonicParsing="false"
+                onAction="#aceptar" text="Aceptar" prefWidth="120.0" />
+        <Button mnemonicParsing="false" onAction="#cancelar" text="Cancelar"
+                prefWidth="120.0" defaultButton="true" />
+      </buttons>
+    </ButtonBar>
+  </children>
+</AnchorPane>
